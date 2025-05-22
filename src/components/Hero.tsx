@@ -32,7 +32,7 @@ const Hero = () => {
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-lg transform hover:scale-105 transition-transform duration-300">
               <img
-                src="/lovable-uploads/93b8c919-d943-49f6-bef4-894b2633d08a.png"
+                src="/lovable-uploads/38f8685c-e17d-4136-9cee-6dc552c51946.png"
                 alt="Siti Mardiana"
                 className="w-full h-full object-cover"
               />
