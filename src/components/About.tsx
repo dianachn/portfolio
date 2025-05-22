@@ -1,5 +1,5 @@
 
-import { User, MapPin, Mail, Globe } from 'lucide-react';
+import { User, MapPin, Mail, Globe, FileText, Book } from 'lucide-react';
 
 const About = () => {
   return (
@@ -20,60 +20,79 @@ const About = () => {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="font-medium w-24">Full Name:</span>
-                  <span className="text-gray-600">John Doe</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="font-medium w-24">Age:</span>
-                  <span className="text-gray-600">30 Years</span>
+                  <span className="text-gray-600">Siti Mardiana</span>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium w-24">Location:</span>
                   <div className="flex items-center text-gray-600">
                     <MapPin size={16} className="mr-1" />
-                    <span>New York, USA</span>
+                    <span>Indonesia</span>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-medium w-24">Phone:</span>
+                  <div className="flex items-center text-gray-600">
+                    <span>+62 831 2129 0491</span>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="font-medium w-24">Email:</span>
                   <div className="flex items-center text-gray-600">
                     <Mail size={16} className="mr-1" />
-                    <span>john.doe@example.com</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="font-medium w-24">Website:</span>
-                  <div className="flex items-center text-gray-600">
-                    <Globe size={16} className="mr-1" />
-                    <span>johndoe.com</span>
+                    <span>mardianasiti853@gmail.com</span>
                   </div>
                 </li>
               </ul>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <Book className="mr-2 text-primary" size={20} />
+                Education
+              </h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-medium text-gray-900">SMK Tunas Harapan Pasarkemis</h4>
+                  <p className="text-gray-600">Office Administration</p>
+                  <p className="text-sm text-gray-500">2018 - 2021</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <Globe className="mr-2 text-primary" size={20} />
+                Languages
+              </h3>
+              <div className="space-y-3">
+                <div>
+                  <span className="font-medium">Indonesian:</span>
+                  <span className="ml-2 text-gray-600">Fluent</span>
+                </div>
+                <div>
+                  <span className="font-medium">English:</span>
+                  <span className="ml-2 text-gray-600">Upper Intermediate</span>
+                </div>
+              </div>
             </div>
           </div>
           
           <div className="lg:col-span-3 space-y-6">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
-              <p className="text-gray-600 mb-4">
-                I am a dedicated [your profession] with over [X] years of experience in the [your industry] industry. 
-                Throughout my career, I have developed a strong foundation in [key skill areas] and have consistently 
-                delivered results in challenging environments.
-              </p>
-              <p className="text-gray-600">
-                My professional journey has equipped me with valuable insights into [specific aspects of your work], 
-                allowing me to [your unique value proposition]. I am passionate about [what you care about professionally] 
-                and continuously strive to enhance my skills in [areas of improvement or interest].
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">My Approach</h3>
-              <p className="text-gray-600">
-                I believe in [your professional philosophy or approach]. My work is guided by [your principles or values], 
-                and I take pride in [what you're proud of professionally]. I enjoy collaborating with teams to [what you 
-                do well in team settings] and am always eager to take on new challenges that allow me to [what you want 
-                to do more of].
-              </p>
+              <h3 className="text-2xl font-semibold mb-4 flex items-center">
+                <FileText className="mr-2 text-primary" size={24} />
+                Profile Summary
+              </h3>
+              <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <p className="text-gray-600 mb-4">
+                  A vocational graduate in Office Management with hands-on experience in administration, 
+                  procurement, and customer service. Skilled in handling documents, data entry, procurement 
+                  processes, and client interaction.
+                </p>
+                <p className="text-gray-600">
+                  Detail-oriented, responsive, and able to perform well under pressure.
+                </p>
+              </div>
             </div>
           </div>
         </div>

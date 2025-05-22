@@ -1,48 +1,43 @@
 
-import { ArrowDown } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Mail, Download } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white to-gray-100">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Hi, I'm <span className="text-primary">John Doe</span>
-              <br />
-              <span className="text-3xl md:text-4xl lg:text-5xl">Professional Title</span>
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+          <div className="w-full md:w-1/2 space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
+              Siti Mardiana
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-              A passionate professional with experience in [your industry]. I specialize in [your key skills] and have a proven track record in [your achievements].
+            <p className="text-xl md:text-2xl text-gray-600">
+              Office Management Professional
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a 
-                href="#contact" 
-                className="px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors"
-              >
+            <p className="text-lg text-gray-600">
+              A vocational graduate in Office Management with hands-on experience in administration,
+              procurement, and customer service.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button className="flex items-center gap-2">
+                <Mail size={18} />
                 Contact Me
-              </a>
-              <a 
-                href="#experience" 
-                className="px-6 py-3 bg-transparent border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-100 transition-colors"
-              >
-                View Experience
-              </a>
+              </Button>
+              <Button variant="outline" className="flex items-center gap-2">
+                <Download size={18} />
+                Download CV
+              </Button>
             </div>
           </div>
-          <div className="flex-1 flex justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
-              {/* Replace with your photo */}
-              <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500">
-                Your Photo
-              </div>
+          <div className="w-full md:w-1/3 flex justify-center">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-lg">
+              <img
+                src="/lovable-uploads/93b8c919-d943-49f6-bef4-894b2633d08a.png"
+                alt="Siti Mardiana"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
-        </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-          <a href="#about" className="text-gray-400 hover:text-primary">
-            <ArrowDown size={24} />
-          </a>
         </div>
       </div>
     </section>

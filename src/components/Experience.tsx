@@ -5,41 +5,37 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      role: "Senior Position",
-      company: "Company Name",
-      period: "Jan 2020 - Present",
-      location: "New York, USA",
+      role: "Customer Relation",
+      company: "PT Delta Mega Persada",
+      location: "Suvarna Sutera",
+      period: "September 2023 - March 2025",
       description: [
-        "Led a team of X professionals in delivering high-quality results for key clients.",
-        "Implemented new strategies that increased efficiency by X% and reduced costs by X%.",
-        "Collaborated with cross-functional teams to develop and launch successful initiatives.",
-        "Managed projects with budgets exceeding $X, consistently meeting deadlines and quality standards."
+        "Handled unit handovers and data entry.",
+        "Managed customer complaints and work permit requests.",
+        "Conducted area supervision and responded to incoming calls."
       ]
     },
     {
       id: 2,
-      role: "Mid-Level Position",
-      company: "Previous Company",
-      period: "Mar 2017 - Dec 2019",
-      location: "Boston, USA",
+      role: "Purchasing / Procurement",
+      company: "PT Delta Mega Persada",
+      location: "Suvarna Sutera",
+      period: "May 2022 - September 2023",
       description: [
-        "Developed and executed strategies that contributed to X% growth in [specific area].",
-        "Coordinated with various departments to streamline processes and improve outcomes.",
-        "Created detailed reports and presentations for senior management and key stakeholders.",
-        "Recognized for exceptional performance with [awards or achievements]."
+        "Managed procurement of goods/services and prepared POs and contracts.",
+        "Processed vendor invoices and recorded asset data.",
+        "Sourced and maintained strong relationships with vendors."
       ]
     },
     {
       id: 3,
-      role: "Junior Position",
-      company: "First Company",
-      period: "Jun 2015 - Feb 2017",
-      location: "Chicago, USA",
+      role: "Staff Administrasi",
+      company: "PT Delta Mega Persada",
+      location: "Suvarna Sutera",
+      period: "August 2021 - April 2022",
       description: [
-        "Assisted in the implementation of [specific projects or initiatives].",
-        "Conducted research and analysis to support decision-making processes.",
-        "Participated in team meetings and contributed innovative ideas for improvement.",
-        "Developed valuable skills in [specific areas] that laid the foundation for career growth."
+        "Calculated and recorded water usage data from field staff.",
+        "Reported usage to the finance department for billing purposes."
       ]
     }
   ];
@@ -74,12 +70,12 @@ const Experience = () => {
                     
                     <div className="flex items-center mb-2 text-gray-600">
                       <BriefcaseBusiness size={16} className="mr-1" />
-                      <span className="font-medium">{exp.company}</span>
+                      <span className="font-medium">{exp.company} - {exp.location}</span>
                     </div>
                     
                     <div className="flex items-center mb-4 text-gray-500 text-sm">
                       <Calendar size={14} className="mr-1" />
-                      <span>{exp.period} | {exp.location}</span>
+                      <span>{exp.period}</span>
                     </div>
                     
                     <ul className="space-y-2 text-gray-600 list-disc pl-5">
