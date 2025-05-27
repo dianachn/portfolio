@@ -1,7 +1,6 @@
-
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,28 +15,30 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Skills", href: "#skills" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <header 
+    <header
       className={cn(
-        'fixed w-full z-30 transition-all duration-300 py-4',
-        scrolled ? 'bg-white bg-opacity-90 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        "fixed w-full z-30 transition-all duration-300 py-4",
+        scrolled
+          ? "bg-white bg-opacity-90 shadow-md backdrop-blur-sm"
+          : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#" className="text-xl font-bold text-primary">
-          John Doe
+          Siti Mardiana
         </a>
 
         {/* Desktop Navigation */}

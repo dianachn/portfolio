@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Mail, Download } from "lucide-react";
 
@@ -15,15 +14,30 @@ const Hero = () => {
               Office Management Professional & Creative Enthusiast
             </p>
             <p className="text-lg text-gray-700">
-              A vocational graduate in Office Management with hands-on experience in administration,
-              procurement, and customer service. Driven by creativity and passion for the arts.
+              A vocational graduate in Office Management with hands-on
+              experience in administration, procurement, and customer service.
+              Driven by creativity and passion for the arts.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button className="bg-purple-400 hover:bg-purple-500 text-white flex items-center gap-2 font-medium shadow-sm">
+              <Button
+                className="bg-purple-400 hover:bg-purple-500 text-white flex items-center gap-2 font-medium shadow-sm"
+                onClick={() =>
+                  (window.location.href = "mailto:mardianasiti853@gmail.com")
+                }
+              >
                 <Mail size={18} />
                 Contact Me
               </Button>
-              <Button variant="outline" className="border-purple-400 text-purple-700 hover:bg-purple-100 flex items-center gap-2 shadow-sm">
+              <Button
+                variant="outline"
+                className="border-purple-400 text-purple-700 hover:bg-purple-100 flex items-center gap-2 shadow-sm"
+                onClick={() => {
+                  window.open(
+                    "/lovable-uploads/CV Siti Mardiana (English).pdf",
+                    "_blank"
+                  );
+                }}
+              >
                 <Download size={18} />
                 Download CV
               </Button>
