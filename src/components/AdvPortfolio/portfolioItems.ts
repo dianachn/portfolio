@@ -1,0 +1,82 @@
+import { PortfolioItemType } from "./types";
+
+export const portfolioItems: PortfolioItemType[] = [
+  {
+    id: "1",
+    title: "Abstract Landscape",
+    description:
+      "A series of abstract landscapes inspired by natural formations",
+    imageUrl: "https://picsum.photos/id/1015/800/800",
+    year: "2023",
+    category: "drawing",
+    // tags: ["graffiti", "vandalism"],
+  },
+  {
+    id: "2",
+    title: "Digital Portrait",
+    description: "Digital portrait study using various brushes and techniques",
+    imageUrl: "https://picsum.photos/id/1025/800/800",
+    year: "2022",
+    category: "digital art",
+  },
+  {
+    id: "3",
+    title: "E-commerce Website",
+    imageUrl: "https://picsum.photos/id/0/800/800",
+    year: "2023",
+    category: "website",
+  },
+  {
+    id: "4",
+    title: "Urban Sketches",
+    description: "A collection of urban sketches from various cities",
+    imageUrl: "https://picsum.photos/id/1071/800/800",
+    year: "2021",
+    category: "drawing",
+  },
+  {
+    id: "5",
+    title: "Fantasy Illustration",
+    imageUrl: "https://picsum.photos/id/1083/800/800",
+    year: "2022",
+    category: "digital art",
+  },
+  {
+    id: "6",
+    title: "Portfolio Website",
+    description: "A responsive portfolio website built with React",
+    imageUrl: "https://picsum.photos/id/180/800/800",
+    year: "2023",
+    category: "website",
+  },
+  {
+    id: "7",
+    title: "Character Design",
+    imageUrl: "https://picsum.photos/id/237/800/800",
+    year: "2022",
+    category: "digital art",
+  },
+  {
+    id: "8",
+    title: "Nature Studies",
+    description: "Pencil studies of natural elements",
+    imageUrl: "https://picsum.photos/id/15/800/800",
+    year: "2021",
+    category: "drawing",
+  },
+  {
+    id: "9",
+    title: "Blog Platform",
+    description: "A custom blog platform with content management",
+    imageUrl: "https://picsum.photos/id/48/800/800",
+    year: "2023",
+    category: "website",
+  },
+  {
+    id: "10",
+    title: "Blog Platform",
+    imageUrl: "https://picsum.photos/id/48/800/800",
+    year: "2023",
+    category: "website",
+  },
+];

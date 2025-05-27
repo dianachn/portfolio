@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -7,6 +6,8 @@ import Skills from "@/components/Skills";
 import Hobbies from "@/components/Hobbies";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+// import Portfolio from "@/components/SimplePortfolio/Portfolio";
+import Portfolio from "@/components/AdvPortfolio/Portfolio";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <About />
       <Experience />
       <Skills />
+      <Portfolio />
       <Hobbies />
       <Contact />
       <Footer />
