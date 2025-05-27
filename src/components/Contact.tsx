@@ -1,6 +1,6 @@
-import { Mail, Phone } from 'lucide-react';
-import { SiLinkedin } from 'react-icons/si';
-import { Button } from '@/components/ui/button';
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
+import { BsTelephone } from "react-icons/bs";
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
@@ -18,10 +18,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-              <Phone className="h-7 w-7 text-primary" />
+              <BsTelephone size={28} className="text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Phone</h3>
             <p className="text-gray-600">+62 831 2129 0491</p>
@@ -32,7 +32,7 @@ const Contact = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-              <Mail className="h-7 w-7 text-primary" />
+              <SiGmail size={28} className="text-primary" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Email</h3>
             <p className="text-gray-600">mardianasiti853@gmail.com</p>
@@ -52,12 +52,29 @@ const Contact = () => {
               className="mt-4"
               onClick={() =>
                 window.open(
-                  'https://www.linkedin.com/in/siti-mardiana-b38b55269/',
-                  '_blank'
+                  "https://www.linkedin.com/in/siti-mardiana-b38b55269/",
+                  "_blank"
                 )
               }
             >
               Visit Profile
+            </Button>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition-shadow">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+              <SiGithub size={28} className="text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">GitHub</h3>
+            <p className="text-gray-600">@dianachn</p>
+            <Button
+              variant="outline"
+              className="mt-4"
+              onClick={() =>
+                window.open("https://github.com/dianachn", "_blank")
+              }
+            >
+              View Profile
             </Button>
           </div>
         </div>
