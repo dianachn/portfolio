@@ -24,20 +24,23 @@ const Navbar = () => {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Hobbies", href: "#hobbies" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
     <header
       className={cn(
-        "fixed w-full z-30 transition-all duration-300 py-4",
-        scrolled
-          ? "bg-white bg-opacity-90 shadow-md backdrop-blur-sm"
-          : "bg-transparent"
+        "fixed w-full z-30 transition-all duration-300",
+        scrolled ? "nav-shape-scrolled" : "nav-shape"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold text-primary">
+      <div className="container relative z-10 mx-auto px-4 md:px-6 flex items-center justify-between py-4">
+        <a
+          href="#"
+          className="text-xl font-bold text-foreground hover:text-primary-foreground transition-colors"
+        >
           Siti Mardiana
         </a>
 
@@ -47,7 +50,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+              className="text-sm font-medium text-foreground hover:text-primary-foreground transition-colors"
             >
               {link.name}
             </a>
@@ -56,8 +59,9 @@ const Navbar = () => {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="md:hidden text-gray-600 hover:text-primary"
+          className="md:hidden text-foreground hover:text-primary-foreground transition-colors"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -65,13 +69,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="md:hidden relative z-20">
+          <div className="container mx-auto px-4 py-4 bg-background/95 backdrop-blur-sm rounded-b-2xl shadow-lg">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-primary"
+                className="block py-2 text-sm font-medium text-foreground hover:text-primary-foreground transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
