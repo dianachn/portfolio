@@ -1,31 +1,45 @@
-import { BriefcaseBusiness, Calendar, Sparkles } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  Calendar as CalendarIcon,
+  Sparkles,
+  Map as LocationIcon,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 const Experience = () => {
   const experiences = [
     {
       id: 0,
-      role: "Junior Web Designer (Self-Initiated Project)",
-      company: "Guided Learning",
-      location: "",
-      period: "May 2025 - Present",
+      role: "Content Editor",
+      company: "Zentala Agency",
+      location: "Remote",
+      period: "April 2025 - July 2025",
+      logo: "/images/companies/zentala-agency.png.jpeg",
       description: [
-        "Currently learning web design through a hands-on project, building a website from scratch while receiving guidance from an experienced coworker.",
-        "Developing skills in layout design, user interface, and responsive design using HTML, CSS, and basic web tools.",
-        "Focused on applying best practices in visual structure, readability, and usability across devices.",
+        "Supported the content team by reviewing written materials for grammar accuracy and clarity in English.",
+        "Provided suggestions to writers and used AI tools to assist in editing and refining content.",
+        "Sourced appropriate images for blog posts and thumbnails using free resources and AI-generated visuals.",
+        "Assisted with light design tasks, including creating business cards using Canva.",
+        "Learning basic web development using GenAI tools to build personal portfolios.",
+        "Utilized tools like GitHub and Cursor to help review and manage content files during development.",
       ],
     },
 
     {
       id: 1,
-      role: "Customer Relation (Handover)",
+      role: "Customer Relation",
       company: "PT Delta Mega Persada",
       location: "Suvarna Sutera",
       period: "September 2023 - March 2025",
+      logo: "/images/companies/delta-mega-persada.png.webp",
       description: [
-        "Handled unit handovers and data entry.",
-        "Managed customer complaints and work permit requests.",
-        "Conducted area supervision and responded to incoming calls.",
+        "Handled 15–25+ customer calls per day regarding complaints, payment inquiries, and technical support.",
+        "Created 5–10 handover invitations per batch, confirmed appointments via email/WhatsApp, and met customers daily to explain estate regulations.",
+        "Served front-office customers by processing renovation deposit refunds, verifying site conditions, and coordinating with finance and operations teams.",
+        "Drafted and distributed customer notifications (e.g., service interruptions, office closures) via email and print.",
+        "Registered 200–300+ free tax (PPN) units annually into the government portal (SiKumbang) by compiling Handover data and unit documentation.",
+        "Managed daily stock tracking and document archiving for unit handover preparation.",
+        "Oversaw 1–12 unit handovers per day depending on project stage, providing full explanation of house condition and warranty.",
       ],
     },
     {
@@ -34,10 +48,14 @@ const Experience = () => {
       company: "PT Delta Mega Persada",
       location: "Suvarna Sutera",
       period: "May 2022 - September 2023",
+      logo: "/images/companies/delta-mega-persada.png.webp",
       description: [
-        "Managed procurement of goods/services and prepared POs and contracts.",
-        "Processed vendor invoices and recorded asset data.",
-        "Sourced and maintained strong relationships with vendors.",
+        "Processed 10–20 Purchase Requests and POs monthly across departments using an internal procurement system.",
+        "Coordinated with 20–50+ vendors for product sourcing, quotations, and delivery matching required specs.",
+        "Searched vendors via internal database, referrals, or internet, and arranged meetings for negotiation and technical alignment.",
+        "Prepared 150–250 annual Work Contracts for outsourcing vendors (security, cleaning, receptionist).",
+        "Processed up to 200 invoices monthly, submitted to finance with complete documentation for payment.",
+        "Maintained procurement records, asset registration logs, and purchase reports for audit and tracking.",
       ],
     },
     {
@@ -46,9 +64,13 @@ const Experience = () => {
       company: "PT Delta Mega Persada",
       location: "Suvarna Sutera",
       period: "August 2021 - April 2022",
+      logo: "/images/companies/delta-mega-persada.png.webp",
       description: [
-        "Calculated and recorded water usage data from field staff.",
-        "Reported usage to the finance department for billing purposes.",
+        "Inputted and calculated monthly water usage data for 5,000+ housing units from 20 clusters using Excel.",
+        "Prepared billing reports and submitted them to the finance team for invoice generation.",
+        "Supported the operational team by sourcing tools and materials online, aligned with technical requirements for approval.",
+        "Coordinated with the field team for issue resolution, document follow-up, and real-time updates.",
+        "Conducted stock opname and submitted item requests to procurement for restocking.",
       ],
     },
   ];
@@ -134,28 +156,64 @@ const Experience = () => {
                 {/* Content */}
                 <div className="w-full md:w-1/2">
                   <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="p-2 rounded-full bg-accent/20">
-                        <BriefcaseBusiness
-                          className="text-accent-foreground"
-                          size={20}
-                        />
+                    <div className="flex items-center gap-3 mb-4">
+                      {experience.logo && (
+                        <div className="w-12 h-12 rounded-lg bg-white p-2 shadow-sm border">
+                          <img
+                            src={experience.logo}
+                            alt={`${experience.company} logo`}
+                            className="w-full h-full object-contain"
+                            onError={(e) => {
+                              // Fallback to icon if logo fails to load
+                              const target =
+                                e.currentTarget as HTMLImageElement;
+                              target.style.display = "none";
+                              const fallback =
+                                target.nextElementSibling as HTMLElement;
+                              if (fallback) {
+                                fallback.style.display = "flex";
+                              }
+                            }}
+                          />
+                          <div className="hidden p-2 rounded-full bg-accent/20">
+                            <BriefcaseBusiness
+                              className="text-accent-foreground"
+                              size={20}
+                            />
+                          </div>
+                        </div>
+                      )}
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-secondary-foreground">
+                          {experience.role}
+                          <span className="text-sm font-medium text-muted-foreground">
+                            &nbsp;at {experience.company}
+                          </span>
+                        </h3>
+
+                        <div className="flex items-center gap-3 text-xs text-muted-foreground mt-1">
+                          <div className="flex items-center gap-1">
+                            <CalendarIcon size={16} />
+                            <span>{experience.period}</span>
+                          </div>
+                          {experience.location && (
+                            <div className="flex items-center gap-1">
+                              <LocationIcon size={16} />
+                              {experience.location}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                      <h3 className="text-xl font-semibold text-secondary-foreground">
-                        {experience.role}
-                      </h3>
                     </div>
-                    <div className="flex items-center gap-2 text-muted-foreground mb-4">
-                      <Calendar size={16} />
-                      <span>{experience.period}</span>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="font-medium text-secondary-foreground">
-                        {experience.company}
-                      </p>
-                      <p className="text-muted-foreground">
-                        {experience.description.join(", ")}
-                      </p>
+                    <div className="space-y-3 pl-16 pt-3">
+                      {experience.description.map((desc, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="w-2 h-2 rounded-full bg-gray-600 mt-2 flex-shrink-0"></div>
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {desc}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
