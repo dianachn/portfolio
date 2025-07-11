@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { PortfolioItem } from "./PortfolioItem";
 import { PortfolioItemType } from "./types.ts";
+import { ImageModal } from "./ImageModal";
 
 interface PortfolioGridProps {
   items: PortfolioItemType[];
 }
 
 export function PortfolioGrid({ items }: PortfolioGridProps) {
+  const [selectedItem, setSelectedItem] = useState<PortfolioItemType | null>(
+    null
+  );
+
   if (items.length === 0) {
     return (
       <div className="text-center py-20">
@@ -16,11 +22,27 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
     );
   }
 
+  const handleItemClick = (item: PortfolioItemType) => {
+    setSelectedItem(item);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {items.map((item) => (
-        <PortfolioItem key={item.id} item={item} />
-      ))}
-    </div>
+    <>
+      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+        {items.map((item) => (
+          <div key={item.id} className="break-inside-avoid mb-6">
+            <PortfolioItem item={item} onClick={() => handleItemClick(item)} />
+          </div>
+        ))}
+      </div>
+
+      {selectedItem && (
+        <ImageModal item={selectedItem} onClose={handleCloseModal} />
+      )}
+    </>
   );
 }

@@ -5,23 +5,28 @@ import { cn } from "@/lib/utils";
 
 interface PortfolioItemProps {
   item: PortfolioItemType;
+  onClick?: () => void;
 }
 
-export function PortfolioItem({ item }: PortfolioItemProps) {
+export function PortfolioItem({ item, onClick }: PortfolioItemProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="group relative overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-md"
+      className={cn(
+        "group relative overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer",
+        onClick && "hover:scale-[1.02]"
+      )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
-      <div className="aspect-square overflow-hidden">
+      <div className="overflow-hidden">
         <img
           src={item.imageUrl}
           alt={item.title}
           className={cn(
-            "h-full w-full object-cover transition-transform duration-300",
+            "w-full h-auto object-cover transition-transform duration-300",
             isHovered ? "scale-105" : "scale-100"
           )}
         />

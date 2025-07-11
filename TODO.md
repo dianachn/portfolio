@@ -8,7 +8,7 @@
 
 [ ] Upgrade Skills Percentage into Horizontal Progress Bar
 
-[ ] Make the Pictures of Artworks Visible (Not Cropped)
+[x] Make the Pictures of Artworks fully Visible (Not Croppted)
 
 [ ] Fix the Design of Hero
 
