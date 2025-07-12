@@ -49,10 +49,10 @@ export function ImageModal({ item, onClose }: ImageModalProps) {
           <X className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
         </button>
 
-        {/* Content layout */}
-        <div className="flex flex-col lg:flex-row h-full">
+        {/* Content layout: always horizontal (image left, description right) */}
+        <div className="flex flex-row h-full max-h-[90vh]">
           {/* Image section - left side */}
-          <div className="flex-1 lg:w-1/2 p-3 sm:p-6 flex items-center justify-center">
+          <div className="flex-1 w-1/2 min-w-0 p-2 sm:p-6 flex items-center justify-center overflow-auto">
             <img
               src={item.imageUrl}
               alt={item.title}
@@ -61,7 +61,7 @@ export function ImageModal({ item, onClose }: ImageModalProps) {
           </div>
 
           {/* Content section - right side */}
-          <div className="flex-1 lg:w-1/2 p-3 sm:p-6 lg:pl-0 flex flex-col justify-center">
+          <div className="flex-1 w-1/2 min-w-0 p-2 sm:p-6 flex flex-col justify-center overflow-auto">
             <div className="space-y-3 sm:space-y-6">
               {/* Header */}
               <div className="flex items-start justify-between gap-2">
