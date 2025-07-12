@@ -32,20 +32,24 @@ export function PortfolioItem({ item, onClick }: PortfolioItemProps) {
         />
       </div>
 
-      <div className="p-4">
-        <div className="flex items-start justify-between">
-          <h3 className="font-medium text-lg">{item.title}</h3>
-          <Badge variant="outline">{item.year}</Badge>
+      <div className="p-2 sm:p-3 lg:p-4">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="font-medium text-xs sm:text-sm lg:text-lg leading-tight flex-1">
+            {item.title}
+          </h3>
+          <Badge variant="outline" className="text-xs flex-shrink-0">
+            {item.year}
+          </Badge>
         </div>
 
         {item.description && (
-          <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+          <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground line-clamp-2 leading-tight">
             {item.description}
           </p>
         )}
 
-        <div className="mt-3">
-          <Badge variant="secondary" className="capitalize">
+        <div className="mt-2 sm:mt-3">
+          <Badge variant="secondary" className="capitalize text-xs">
             {item.category}
           </Badge>
         </div>

@@ -32,9 +32,10 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
   return (
     <>
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+      {/* Mobile: 2 columns, Tablet: 3 columns, Desktop: 4 columns, Large: 5 columns */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6">
         {items.map((item) => (
-          <div key={item.id} className="break-inside-avoid mb-6">
+          <div key={item.id} className="w-full">
             <PortfolioItem item={item} onClick={() => handleItemClick(item)} />
           </div>
         ))}
