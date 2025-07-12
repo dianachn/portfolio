@@ -190,7 +190,7 @@ export const portfolioItems: PortfolioItemType[] = [
     title: "Wonyoung Izone",
     description:
       "Digital illustration of Wonyoung from IZ*ONE on a show. Created using IbisPaint on an Android phone.",
-    imageUrl: "/images/029-W onyoung-Izone-Digital-Illustration-2020.png",
+    imageUrl: "/images/029-Wonyoung-Izone-Digital-Illustration-2020.png",
     year: "2020",
     category: "digital art",
   },
@@ -200,7 +200,7 @@ export const portfolioItems: PortfolioItemType[] = [
     title: "Diana Illustration",
     description:
       "Digital illustration of Diana with elegant styling and artistic composition from 2020. Created using IbisPaint on an Android phone.",
-    imageUrl: "/images/012-Diana-Illustration-2020.jpg",
+    imageUrl: "/images/012-Diana-Illustration-2020.png",
     year: "2020",
     category: "digital art",
   },
