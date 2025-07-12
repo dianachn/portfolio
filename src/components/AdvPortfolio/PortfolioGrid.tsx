@@ -32,8 +32,8 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
   return (
     <>
-      {/* Masonry columns for true masonry effect */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
+      {/* Masonry columns for true masonry effect, now 2 columns on mobile */}
+      <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-4 gap-4">
         {items.map((item) => (
           <div key={item.id} className="break-inside-avoid mb-4">
             <PortfolioItem item={item} onClick={() => handleItemClick(item)} />
