@@ -26,7 +26,7 @@ export function PortfolioItem({ item, onClick }: PortfolioItemProps) {
           src={item.imageUrl}
           alt={item.title}
           className={cn(
-            "w-full h-auto object-cover transition-transform duration-300",
+            "w-full h-auto max-w-full object-cover transition-transform duration-300 max-w-[100%] sm:max-w-[100%] md:max-w-[100%] lg:max-w-[100%]",
             isHovered ? "scale-105" : "scale-100"
           )}
         />
