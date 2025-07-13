@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Download, Sparkles } from "lucide-react";
+import PhotoWithBackground from "./PhotoWithBackground";
 
 const Hero = () => {
   return (
@@ -30,30 +31,32 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
           <div className="w-full md:w-1/2 space-y-6">
-            {/* Name with decorative background */}
+            {/* Name with decorative pink background shape */}
             <div className="relative inline-block">
-              <div className="absolute inset-0 bg-primary rounded-2xl transform rotate-1"></div>
-              <h1 className="relative text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground p-2">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#F7DAE7] to-[#E2B4C1] rounded-3xl transform rotate-2 shadow-lg"></div>
+              <h1 className="relative text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#A95166] p-2">
                 Siti Mardiana
               </h1>
             </div>
 
             {/* Title with primary color */}
             <p className="text-xl md:text-2xl text-secondary-foreground font-medium">
-              Office Management Professional & Creative Enthusiast
+              Office Support Professional (Admin | Procurement | Customer
+              Service)
             </p>
 
             {/* Description with improved readability */}
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A vocational graduate in Office Management with hands-on
-              experience in administration, procurement, and customer service.
-              Driven by creativity and passion for the arts.
+              Experienced in admin, procurement, and customer service. Skilled
+              in handling invoices, vendor coordination, and data management.
+              Proficient in Excel, Google Docs, Canva, and AI tools. Fast
+              learner, reliable, and collaborative.
             </p>
 
             {/* Buttons with updated styling */}
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
-                className="bg-primary hover:bg-primary/90 text-primary-foreground flex items-center gap-2 font-medium shadow-sm rounded-full px-6"
+                className="bg-gradient-to-r from-[#F7DAE7] to-[#E2B4C1] hover:from-[#E2B4C1] hover:to-[#D38C9D] text-[#A95166] flex items-center gap-2 font-medium shadow-sm rounded-full px-6 border-0"
                 onClick={() =>
                   (window.location.href = "mailto:mardianasitiid@gmail.com")
                 }
@@ -77,38 +80,12 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile image with decorative elements */}
-          <div className="w-full md:w-1/3 aspect-square flex justify-center items-center relative">
-            {/* Decorative background shapes */}
-            <div
-              className="absolute inset-0 bg-secondary/60 rounded-[70%_30%_70%_30%] transform rotate-[3deg] scale-110 z-0 
-                          before:absolute before:inset-4 before:border-2 before:border-secondary/30 before:rounded-[70%_30%_70%_30%] before:rotate-6
-                          after:absolute after:inset-2 after:border-dashed after:border-secondary/20 after:rounded-[65%_35%_75%_25%] after:-rotate-3"
-            ></div>
-
-            <div
-              className="absolute inset-0 bg-primary/40 rounded-[30%_70%_40%_60%] transform -rotate-12 scale-95 z-10
-                          before:absolute before:inset-6 before:border-2 before:border-primary/30 before:rounded-[35%_65%_45%_55%] before:-rotate-6
-                          after:absolute after:inset-3 after:border-dotted after:border-primary/20 after:rounded-[25%_75%_35%_65%] after:rotate-3"
-            ></div>
-
-            <div
-              className="absolute inset-0 bg-accent/30 rounded-[60%_40%_30%_70%] transform rotate-45 scale-90 z-20
-                          before:absolute before:inset-5 before:border-2 before:border-accent/30 before:rounded-[55%_45%_35%_65%] before:rotate-12
-                          after:absolute after:inset-4 after:border-dashed after:border-accent/20 after:rounded-[65%_35%_25%_75%] after:-rotate-6"
-            ></div>
-
-            {/* Profile image (on top) */}
-            <div
-              className="absolute top-2/3 left-1/3 w-1/2 h-1/2 rounded-full overflow-hidden border-4 border-background/90 shadow-lg hover:scale-105 transition-transform duration-300 z-30 transform -translate-x-1/2 -translate-y-1/2
-                          before:absolute before:inset-0 before:-m-2 before:rounded-full before:border before:border-background/40 before:scale-110"
-            >
-              <img
-                src="/lovable-uploads/foto diana.jpg"
-                alt="Siti Mardiana"
-                className="w-full h-full object-cover"
-              />
-            </div>
+          {/* Profile image with abstract background shape */}
+          <div className="w-full md:w-[40%] flex justify-center items-center">
+            <PhotoWithBackground
+              imageSrc="/lovable-uploads/foto-diana.jpg"
+              imageAlt="Siti Mardiana"
+            />
           </div>
         </div>
       </div>
