@@ -35,7 +35,7 @@ const Hero = () => {
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-[#F7DAE7] to-[#E2B4C1] rounded-3xl transform rotate-2 shadow-lg"></div>
               <h1 className="relative text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#A95166] p-2">
-                Siti Mardiana
+                Siti Mardiana Art Gallery
               </h1>
             </div>
 

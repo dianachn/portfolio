@@ -30,7 +30,7 @@
     },
     "ghcr.io/devcontainers/features/git:1": {}
   },
-  "forwardPorts": [8080],
+  "forwardPorts": [8081],
   "postCreateCommand": "npm install",
   "remoteUser": "node"
 }
